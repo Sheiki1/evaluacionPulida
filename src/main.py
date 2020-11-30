@@ -12,7 +12,7 @@ def tablaCSV():
     #pandas convierte el archivo csv en una tabla (DataFrame)
     readcsv = pd.read_csv('../data/employees.csv')
     #Ya que flask no soporta DataFrames lo converti en una tabla de html con el metodo .to_html()
-    table = "<style> h1{font-family: Verdana;  } table, table th{ border-collapse:collapse;text-align:center; } </style>" + "<h1>Evaluación Shei Miceli</h1>" + readcsv.to_html()
+    table = "<style> h1{font-family:Candara; text-align:center; } table {font-family:Candara; border-collapse: collapse; width: 100%;} th, td {text-align: left; padding: 8px;} tr:nth-child(even) {background-color: #f2f2f2;} </style>" + "<br> <h1>Employee information</h1>" + "<br>" + readcsv.to_html()
     return(table)
 
 if __name__== '__main__':
